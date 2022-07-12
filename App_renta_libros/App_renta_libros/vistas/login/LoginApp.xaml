@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_renta_libros.vistas.login.LoginApp"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Padding="40, 10, 40, 0" Margin="10" VerticalOptions="CenterAndExpand" Spacing="10" Orientation="Vertical">
+            <Image Source="logo.png"
+                   HeightRequest="100"
+                   WidthRequest="100"/>
+            <Label Padding="0, 50, 0, 50" FontSize="Large" Text="Iniciar sesion" HorizontalTextAlignment="Center"/>
+            <Entry Placeholder="Ingrese email" x:Name="email_login"
+                   Keyboard="Email"/>
+            <Entry Placeholder="Ingrese su password"
+                   x:Name="password_login"
+                   IsPassword="True" />
+            <Button Margin="50" BackgroundColor="Black"
+                    TextColor="White"
+                    Text="Iniciar sesion"
+                    Clicked="login"
+                    CornerRadius="10"/>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="¿No tienes una cuenta?  "
+                              TextColor="Gray" />
+                        <Span Text="Crear una"
+                              FontAttributes="Bold"
+                              TextDecorations="Underline"
+                              TextColor="Gray" />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

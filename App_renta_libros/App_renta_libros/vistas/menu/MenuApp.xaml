@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:secciones="clr-namespace:App_renta_libros.vistas.menu.secciones"
+            x:Class="App_renta_libros.vistas.menu.MenuApp"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            NavigationPage.HasNavigationBar="False">
+    <secciones:SearchProducts Title="Buscar productos" IconImageSource="search.png"></secciones:SearchProducts>
+    <secciones:MiProduct Title="Mis productos" IconImageSource="upload.png"></secciones:MiProduct>
+    <secciones:MiData Title="Mi informacion" IconImageSource="user.png"></secciones:MiData>
+</TabbedPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_renta_libros.vistas.PublicarProducto"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Padding="40, 0, 40, 0"
+                     Margin="10"
+                     VerticalOptions="CenterAndExpand"
+                     Spacing="10"
+                     Orientation="Vertical">
+            <Image Source="regresar.png"
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   HorizontalOptions="Start">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="regresar" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Padding="0, 100, 0, 100"
+                   FontSize="Large"
+                   Text="Datos del producto"
+                   HorizontalTextAlignment="Center" />
+            <Entry Placeholder="nombre"
+                   x:Name="nombre_p" />
+            <Entry Placeholder="Descripcion del producto"
+                   x:Name="descripcion_p" />
+            <Entry Placeholder="Precio del producto"
+                   Keyboard="Numeric"
+                   x:Name="precio_p" />
+            <Button Margin="50"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    Text="Publicar"
+                    Clicked="post"
+                    CornerRadius="10" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

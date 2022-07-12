@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_renta_libros.vistas.menu.secciones.MiProduct">
+    <ContentPage.Content>
+        <StackLayout Padding="40, 50, 40, 50"
+                     Margin="0"
+                     VerticalOptions="StartAndExpand"
+                     Spacing="0"
+                     Orientation="Vertical">
+            <Label Padding="0, 0, 0, 20"
+                   FontSize="Large"
+                   Text="Mis Productos"
+                   HorizontalTextAlignment="Center" />
+            <Image Source="agregar.png"
+                   HeightRequest="50"
+                   WidthRequest="50">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="agregar" />
+                </Image.GestureRecognizers>
+            </Image>
+            <SearchBar Placeholder="Buscar por nombre"
+                       Keyboard="Chat"
+                       TextChanged="SearchBar_TextChanged" />
+            <ListView ItemsSource="{Binding ListViewSource}"
+                      HasUnevenRows="True"
+                      x:Name="ListView"
+                      Margin="0, 40, 0, 40"
+                      IsRefreshing="{Binding IsRefreshing}"
+                      ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="labelBackground"
+                                       Margin="0,8,15,8"
+                                       HeightRequest="1"
+                                       BackgroundColor="Salmon" />
+                                <StackLayout  Grid.Column="1"
+                                              Grid.Row="0"
+                                              HorizontalOptions="Center"
+                                              VerticalOptions="Center"
+                                              Orientation="Vertical">
+                                    <StackLayout>
+                                        <Label Text="{Binding nombre}"
+                                               FontSize="12"
+                                               TextColor="Black" />
+                                        <Label Text="{Binding descripcion}"
+                                               FontSize="12"
+                                               TextColor="Black" />
+                                        <Label Text="{Binding precio}"
+                                               FontSize="12"
+                                               TextColor="Black" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,3 @@
+C:\Users\TD_rex\source\repos\App_renta_libros\App_renta_libros\App_renta_libros.Android\obj\Debug\71\MonoAndroid,Version=v7.1.AssemblyAttributes.cs
+C:\Users\TD_rex\source\repos\App_renta_libros\App_renta_libros\App_renta_libros.Android\obj\Debug\71\build.props
+C:\Users\TD_rex\source\repos\App_renta_libros\App_renta_libros\App_renta_libros.Android\obj\Debug\71\adb.props
